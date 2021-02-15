@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="twitterRetweet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qVN-1G-y5l">
+                                <rect key="frame" x="157" y="318" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fDu-vX-nu9"/>
+                                    <constraint firstAttribute="width" constant="100" id="y0r-NV-jAi"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H6L-ED-X3B">
+                                <rect key="frame" x="197" y="358" width="19" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H6L-ED-X3B" secondAttribute="height" multiplier="1:1" id="XXr-C3-rl1"/>
+                                    <constraint firstAttribute="width" constant="19" id="hdc-Co-4Mr"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g65-5m-rNF">
+                                <rect key="frame" x="197" y="358" width="19" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="19" id="3Sl-2T-lAM"/>
+                                    <constraint firstAttribute="width" secondItem="g65-5m-rNF" secondAttribute="height" multiplier="1:1" id="YYv-On-vC0"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H6L-ED-X3B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6eD-wL-VVq"/>
+                            <constraint firstItem="H6L-ED-X3B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7DE-Hb-2uh"/>
+                            <constraint firstItem="qVN-1G-y5l" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FKM-JA-hYr"/>
+                            <constraint firstItem="H6L-ED-X3B" firstAttribute="width" secondItem="H6L-ED-X3B" secondAttribute="height" multiplier="1:1" id="Uhh-Br-yzE"/>
+                            <constraint firstItem="qVN-1G-y5l" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="n1v-LT-uaT"/>
+                            <constraint firstItem="g65-5m-rNF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qvf-8C-0Wa"/>
+                            <constraint firstItem="g65-5m-rNF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="raW-Af-XQz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="greenWidth" destination="3Sl-2T-lAM" id="lmw-dA-RhL"/>
+                        <outlet property="normalWidth" destination="hdc-Co-4Mr" id="eEI-bq-gOs"/>
+                        <outlet property="retweet" destination="H6L-ED-X3B" id="lQa-pz-HzI"/>
+                        <outlet property="retweetGreen" destination="g65-5m-rNF" id="xMO-nO-X9g"/>
+                        <outlet property="tapArea" destination="qVN-1G-y5l" id="oYT-A3-bFC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

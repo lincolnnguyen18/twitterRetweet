@@ -1,0 +1,6 @@
+framework module Pods_twitterRetweet {
+  umbrella header "Pods-twitterRetweet-umbrella.h"
+
+  export *
+  module * { export * }
+}
