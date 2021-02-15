@@ -9,15 +9,31 @@ import UIKit
 import SwiftyGif
 
 class ViewController: UIViewController {
-    @IBOutlet weak var retweet: UIImageView! {
+    // @IBOutlet weak var retweet: UIImageView! {
+    //     didSet {
+    //         retweet.isUserInteractionEnabled = false
+    //         retweet.image = UIImage(named: "retweet2")
+    //     }
+    // }
+    @IBOutlet weak var retweet: UIButton! {
         didSet {
-            retweet.isUserInteractionEnabled = false
-            retweet.image = UIImage(named: "retweet2")
+            // retweet.isUserInteractionEnabled = false
+            // retweet.image = UIImage(named: "retweet2")
+            retweet.setImage(UIImage(named: "retweet2"), for: .normal)
+            retweet.tintColor = #colorLiteral(red: 0.3568627451, green: 0.4392156863, blue: 0.5137254902, alpha: 1)
         }
     }
-    @IBOutlet weak var retweetGreen: UIImageView! {
+    // @IBOutlet weak var retweetGreen: UIImageView! {
+    //     didSet {
+    //         retweet.isUserInteractionEnabled = false
+    //     }
+    // }
+    @IBOutlet weak var retweetGreen: UIButton! {
         didSet {
-            retweet.isUserInteractionEnabled = false
+            // retweet.isUserInteractionEnabled = false
+            // retweet.image = UIImage(named: "retweet2")
+            // retweet.setImage(UIImage(named: "retweet2"), for: .normal)
+            retweetGreen.tintColor = #colorLiteral(red: 0.09019607843, green: 0.7490196078, blue: 0.3882352941, alpha: 1)
         }
     }
     @IBOutlet weak var tapArea: UIImageView!
@@ -32,8 +48,11 @@ class ViewController: UIViewController {
         tapArea.addGestureRecognizer(tapGestureRecognizer)
     }
 
+    // @IBOutlet weak var normalWidth: NSLayoutConstraint!
     @IBOutlet weak var normalWidth: NSLayoutConstraint!
+    // @IBOutlet weak var greenWidth: NSLayoutConstraint!
     @IBOutlet weak var greenWidth: NSLayoutConstraint!
+    
     var isRetweeted = false
     
     @objc private func didTapImageView(_ sender: UITapGestureRecognizer) {
@@ -42,7 +61,8 @@ class ViewController: UIViewController {
         if !isRetweeted {
             // let gif = try UIImage(gifName: "favoriteAnimate.gif")
             // self.retweet.setGifImage(gif, loopCount: 1)
-            self.retweetGreen.setImage(UIImage(named: "retweeted2")!)
+            // self.retweetGreen.setImage(UIImage(named: "retweeted2")!)
+            self.retweetGreen.setImage(UIImage(named: "retweeted2"), for: .normal)
             self.retweet.isHidden = true
             self.retweetGreen.isHidden = false
             // self.heart.removeConstraint(heartWidth)
@@ -69,7 +89,7 @@ class ViewController: UIViewController {
             
             isRetweeted = true
         } else {
-            self.retweet.setImage(UIImage(named: "retweet2")!)
+            self.retweet.setImage(UIImage(named: "retweet2")!, for: .normal)
             self.retweet.isHidden = false
             self.retweetGreen.isHidden = true
         
