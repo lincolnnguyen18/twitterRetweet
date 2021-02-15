@@ -16,26 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qVN-1G-y5l">
-                                <rect key="frame" x="157" y="318" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="fDu-vX-nu9"/>
-                                    <constraint firstAttribute="width" constant="100" id="y0r-NV-jAi"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvR-hb-4yh">
-                                <rect key="frame" x="197.66666666666666" y="358.66666666666669" width="19" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="19" id="A6H-h2-qh0"/>
-                                    <constraint firstAttribute="width" secondItem="PvR-hb-4yh" secondAttribute="height" multiplier="1:1" id="s13-kA-vUh"/>
-                                </constraints>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtC-KU-pIV">
-                                <rect key="frame" x="197.66666666666666" y="358.66666666666669" width="19" height="19"/>
+                                <rect key="frame" x="188.66666666666666" y="349.66666666666669" width="37" height="37"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="19" id="1bt-KM-YMC"/>
+                                    <constraint firstAttribute="width" constant="37" id="1bt-KM-YMC"/>
                                     <constraint firstAttribute="width" secondItem="JtC-KU-pIV" secondAttribute="height" multiplier="1:1" id="8fo-DW-vAb"/>
                                 </constraints>
+                                <inset key="contentEdgeInsets" minX="9" minY="9" maxX="9" maxY="9"/>
+                                <connections>
+                                    <action selector="onRetweetGreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jaZ-Ok-7J3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvR-hb-4yh">
+                                <rect key="frame" x="188.66666666666666" y="349.66666666666669" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="KcS-YV-bdy"/>
+                                    <constraint firstAttribute="width" secondItem="PvR-hb-4yh" secondAttribute="height" multiplier="1:1" id="s13-kA-vUh"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="9" minY="9" maxX="9" maxY="9"/>
+                                <connections>
+                                    <action selector="onRetweet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="goC-p4-qiv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -43,18 +44,15 @@
                         <constraints>
                             <constraint firstItem="JtC-KU-pIV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9xh-Bq-iLM"/>
                             <constraint firstItem="PvR-hb-4yh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ERs-ga-77X"/>
-                            <constraint firstItem="qVN-1G-y5l" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FKM-JA-hYr"/>
                             <constraint firstItem="PvR-hb-4yh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Kgc-wd-Aw5"/>
-                            <constraint firstItem="qVN-1G-y5l" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="n1v-LT-uaT"/>
                             <constraint firstItem="JtC-KU-pIV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="uXJ-ch-3Sj"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="greenWidth" destination="1bt-KM-YMC" id="7H3-NV-upH"/>
-                        <outlet property="normalWidth" destination="A6H-h2-qh0" id="DwR-sq-K2i"/>
+                        <outlet property="normalWidth" destination="KcS-YV-bdy" id="7NG-pT-zMC"/>
                         <outlet property="retweet" destination="PvR-hb-4yh" id="1oI-pO-JgQ"/>
                         <outlet property="retweetGreen" destination="JtC-KU-pIV" id="he7-Fz-1WA"/>
-                        <outlet property="tapArea" destination="qVN-1G-y5l" id="oYT-A3-bFC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
